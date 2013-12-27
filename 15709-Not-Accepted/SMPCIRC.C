@@ -30,18 +30,24 @@ O
 #include<math.h>
 #include<stdio.h>
 
-float distance(float x1, float x2, float y1, float y2){
+int distanceSquare(int x1, int x2, int y1, int y2){
 
-	float _X = x2-x1;
-	float _Y = y2-y1;	
+	int _X = x2-x1;
+	int _Y = y2-y1;	
 	
-	return sqrt( _X*_X + _Y*_Y );
+	return  _X*_X + _Y*_Y ;
+
+}
+
+int diffSquare(int x, int y){
+
+	return (y-x) * (y-x) ;
 
 }
 
 int main(){
 
-	float x1,x2,y1,y2,r1,r2;
+	int x1,x2,y1,y2,r1,r2;
 
 	int t;
 
@@ -49,20 +55,21 @@ int main(){
 
 	while(t>0){
 
-	scanf("%f",&x1);
-	scanf("%f",&y1);
+	scanf("%d",&x1);
+	scanf("%d",&y1);
 
-	scanf("%f",&r1);
+	scanf("%d",&r1);
 
-	scanf("%f",&x2);
-	scanf("%f",&y2);	
+	scanf("%d",&x2);
+	scanf("%d",&y2);	
 
-	scanf("%f",&r2);
+	scanf("%d",&r2);
 
-	if(distance(x1,x2,y1,y2)+r1<=r2){
-		if(distance(x1,x2,y1,y2)+r1 == r2)
+	if(distanceSquare(x1,x2,y1,y2) <= diffSquare(r2,r1) ){
+		if( distanceSquare(x1,x2,y1,y2) == diffSquare(r2,r1) )
 			printf("E\n");
 		else
+			//printf("%f : %f\n",distance(x1,x2,y1,y2),(r2-r1));
 			printf("I\n");
 	}
 	else{
