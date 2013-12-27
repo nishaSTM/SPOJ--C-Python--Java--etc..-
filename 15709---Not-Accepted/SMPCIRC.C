@@ -27,3 +27,49 @@ O
 
 */
 
+#include<math.h>
+#include<stdio.h>
+
+float distance(float x1, float x2, float y1, float y2){
+
+	float _X = x2-x1;
+	float _Y = y2-y1;	
+	
+	return sqrt( _X*_X + _Y*_Y );
+
+}
+
+int main(){
+
+	float x1,x2,y1,y2,r1,r2;
+
+	int t;
+
+	scanf("%d",&t);
+
+	while(t>0){
+
+	scanf("%f",&x1);
+	scanf("%f",&y1);
+
+	scanf("%f",&r1);
+
+	scanf("%f",&x2);
+	scanf("%f",&y2);	
+
+	scanf("%f",&r2);
+
+	if(distance(x1,x2,y1,y2)+r1<=r2){
+		if(distance(x1,x2,y1,y2)+r1 == r2)
+			printf("E\n");
+		else
+			printf("I\n");
+	}
+	else{
+		printf("O\n");
+	}
+	t--;
+	}
+return 0;
+}
+
