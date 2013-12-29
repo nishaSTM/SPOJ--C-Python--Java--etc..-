@@ -1,26 +1,65 @@
 #include<string.h>
 #include<stdio.h>
 
-int main(){
+void multiply(char *str){
 
-        int t;
-        char str[1002]="1234+5678";
-        char *a;
+	char *a;
         char *b;
 
-        scanf("%d",&t);
+        a = strtok(str,"+-*");
+        b = strtok(NULL,"+-*");
 
-        while(t>0){
+	printf("%s * %s",a,b);
 
-          scanf("%s",str);
+}
 
-          a = strtok(str,"+-*");
-          b = strtok(NULL,"+-*");
-  
-          printf("%s , %s\n",a,b);
+void subtract(char *str){
 
-        t--;
-        }
+	char *a;
+        char *b;
+
+        a = strtok(str,"+-*");
+        b = strtok(NULL,"+-*");
+
+	printf("%s - %s",a,b);
+
+}
+
+void add(char *str){
+
+	char *a;
+	char *b;
+	
+	a = strtok(str,"+-*");
+        b = strtok(NULL,"+-*");
+
+	printf("%s + %s",a,b);
+
+}
+
+int main(){
+	
+	int t;
+	char str[1002]="1234+5678";
+	char *a;
+	char *b;
+	
+	scanf("%d",&t);
+
+	while(t>0){
+
+		scanf("%s",str);
+
+		printf("str = %s\n",str);
+
+		if(strchr(str,'+')!=NULL)
+			add(str);
+		else if(strchr(str,'-')!=NULL)
+			subtract(str);
+		else if(strchr(str,'*')!=NULL)
+			multiply(str);	
+	t--;
+	}
 
 return 0;
 }
