@@ -54,7 +54,7 @@ def r2(n):
          i = n
          if (i):
 		if (i!=1):
-                result+=str(i)
+                	result+=str(i)
                	result+='i'
          return result
 
