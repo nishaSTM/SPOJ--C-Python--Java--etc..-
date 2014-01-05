@@ -16,9 +16,15 @@ def r1(a):
    multiplier = 1
   if ((_a >= '2') and (_a <= '9')):
    multiplier = (ord(_a)-ord('0'))
- print i
+ return i
 
-r1('3i')
-r1("5m2c3x4i")
-r1("m2c4i")
-r1('5m2c3x')
+print r1('xi')+r1('x9i')
+print r1('i')+r1('9i')
+print r1('c2x2i')+r1('4c8x8i')
+print r1('m2ci')+r1('4m7c9x8i')
+print r1('9c9x9i')+r1('i')
+print r1('i')+r1('9m9c9x8i')
+print r1('m')+r1('i')
+print r1('i')+r1('m')
+print r1('m9i')+r1('i')
+print r1('9m8c7xi')+r1('c2x8i')
