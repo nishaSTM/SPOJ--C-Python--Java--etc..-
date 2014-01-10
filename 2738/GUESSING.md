@@ -6,6 +6,7 @@ If you find a bug, please contact me.
 
 
 My Approach
+-----------
 
 Try all of the following (http://codepad.org/GTSDxses) : 
 
