@@ -14,3 +14,14 @@
 #    counts how many different words can that mean
 #    writes the outcome on standard output
 
+counter = 1
+
+while counter <= 10:
+
+    testinput = "filipek"
+    
+    #testinput = raw_input()
+
+    print pow(2,testinput.count('t')+testinput.count('d')+testinput.count('l')+testinput.count('f'))
+
+    counter = counter + 1
